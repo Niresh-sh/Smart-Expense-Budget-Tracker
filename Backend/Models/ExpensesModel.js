@@ -14,6 +14,7 @@ const expenseSchema = new mongoose.Schema({
     amount: {
         type: Number,
         required: true,
+        min: 0,
     },
     category: {
         type: String,
@@ -27,7 +28,11 @@ const expenseSchema = new mongoose.Schema({
     date: { 
         type: Date,
         default: Date.now,
+        required: true,
     },
-});
+},
+{    timestamps: true,},
+);
+expenseSchema.index({ user: 1, date: -1 });
 
 export default mongoose.model("Expense", expenseSchema);

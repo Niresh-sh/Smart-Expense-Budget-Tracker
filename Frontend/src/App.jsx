@@ -1,11 +1,17 @@
 import React from 'react'
+import Layout from './Components/Layout'
+import Dashboard from './Pages/Dashboard'
+import { Outlet } from 'react-router-dom'
 
 
 function App() {
   return (
     <>
-      
-
+     <div className="flex flex-col h-screen">
+      <main className="grow">
+        <Outlet />
+      </main>
+    </div>
     </>
   )
 }

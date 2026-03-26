@@ -1,6 +1,3 @@
-import React from 'react'
-import Layout from './Components/Layout'
-import Dashboard from './Pages/Dashboard'
 import { Outlet } from 'react-router-dom'
 
 

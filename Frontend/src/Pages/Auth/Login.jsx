@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { DollarSign } from "lucide-react";
@@ -14,10 +13,16 @@ function Login() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+
     if (isLogin) {
-      Login(email, password);
+      navigate("/dashboard");
     } else {
-      register(name, email, password, confirmPassword);
+      if (password !== confirmPassword) {
+        alert("Passwords do not match");
+        return;
+      }
+
+      navigate("/dashboard");
     }
   };
 

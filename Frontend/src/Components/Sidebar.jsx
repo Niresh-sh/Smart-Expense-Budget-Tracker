@@ -1,10 +1,15 @@
 // Sidebar.jsx
-import { LayoutDashboard, Receipt, LineChart, Settings, LogOut } from "lucide-react";
+import {
+  LayoutDashboard,
+  Receipt,
+  LineChart,
+  Settings,
+  LogOut,
+} from "lucide-react";
 
 export default function Sidebar() {
   return (
-    <div className="w-65 h-screen bg-[#f5f5f5] flex flex-col justify-between border-r">
-
+    <div className="w-64 h-screen bg-[#f5f5f5] flex flex-col justify-between border-r border-gray-200 shadow-xl">
       {/* Top Section */}
       <div>
         {/* Logo */}
@@ -13,14 +18,15 @@ export default function Sidebar() {
             ET
           </div>
           <div>
-            <h1 className="text-sm font-semibold text-gray-800">ExpenseTracker</h1>
+            <h1 className="text-sm font-semibold text-gray-800">
+              ExpenseTracker
+            </h1>
             <p className="text-xs text-gray-500">Smart Finance</p>
           </div>
         </div>
 
         {/* Menu */}
         <div className="mt-3 px-3 space-y-2">
-
           {/* Active Item */}
           <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-blue-100 text-blue-600 cursor-pointer">
             <LayoutDashboard size={18} />
@@ -42,13 +48,11 @@ export default function Sidebar() {
             <Settings size={18} />
             <span className="text-sm">Settings</span>
           </div>
-
         </div>
       </div>
 
       {/* Bottom Section */}
       <div className="px-5 pb-5">
-
         {/* User Info */}
         <div className="flex items-center gap-3 mb-4">
           <div className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-500 text-white font-medium">
@@ -65,7 +69,6 @@ export default function Sidebar() {
           <LogOut size={18} />
           <span className="text-sm">Logout</span>
         </div>
-
       </div>
     </div>
   );

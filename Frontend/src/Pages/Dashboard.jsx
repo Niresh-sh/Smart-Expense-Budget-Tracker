@@ -1,15 +1,24 @@
 // Dashboard.jsx
 import { DollarSign, TrendingUp, Tag, Wallet } from "lucide-react";
+import Navbar from "../Components/Navbar";
+import CategoryChart from "../Components/Categorychart";
+import MonthlySpending from "../Components/Monthlychart";
 
 const Dashboard = () => {
   return (
-    <div className="p-6 bg-[#f8fafc] min-h-screen">
-
+    <>
+    <section className="">
+         <Navbar />
+    </section>
+ 
+    <section className="h-80">
+      <div className="p-5 bg-gray-100 min-h-screen font-sans">
+      
       {/* Top Header */}
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-6 p-5">
         
         <div>
-          <h1 className="text-2xl font-semibold text-gray-800">
+          <h1 className="text-3xl font-bold text-gray-800 ">
             Welcome back, niresh 👋
           </h1>
           <p className="text-sm text-gray-500 mt-1">
@@ -27,7 +36,7 @@ const Dashboard = () => {
       <div className="grid grid-cols-4 gap-6">
 
         {/* Card 1 */}
-        <div className="bg-white rounded-2xl p-5 shadow-sm border">
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-200">
           <div className="flex items-center justify-between mb-4">
             <p className="text-sm text-gray-500">Total Expenses</p>
             <div className="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white">
@@ -40,7 +49,7 @@ const Dashboard = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white rounded-2xl p-5 shadow-sm border">
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-200">
           <div className="flex items-center justify-between mb-4">
             <p className="text-sm text-gray-500">Monthly Spending</p>
             <div className="w-9 h-9 flex items-center justify-center rounded-full bg-teal-500 text-white">
@@ -53,7 +62,7 @@ const Dashboard = () => {
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white rounded-2xl p-5 shadow-sm border">
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-200">
           <div className="flex items-center justify-between mb-4">
             <p className="text-sm text-gray-500">Top Category</p>
             <div className="w-9 h-9 flex items-center justify-center rounded-full bg-orange-400 text-white">
@@ -70,7 +79,7 @@ const Dashboard = () => {
         </div>
 
         {/* Card 4 */}
-        <div className="bg-white rounded-2xl p-5 shadow-sm border">
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-200">
           <div className="flex items-center justify-between mb-4">
             <p className="text-sm text-gray-500">Transactions</p>
             <div className="w-9 h-9 flex items-center justify-center rounded-full bg-green-500 text-white">
@@ -85,6 +94,17 @@ const Dashboard = () => {
       </div>
 
     </div>
+      </section>
+
+      <section className="">
+        <div className="p-2 bg-gray-100 min-h-screen">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <MonthlySpending />
+        <CategoryChart />
+      </div>
+    </div>
+      </section>
+    </>
   );
 }
 

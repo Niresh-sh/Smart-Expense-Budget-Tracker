@@ -6,7 +6,7 @@ export default function Layout() {
   return (
     <div className="flex">
       <Sidebar />
-      <main className="flex-1 h-screen overflow-y-auto bg-white">
+      <main className="flex-1 h-screen overflow-y-auto bg-white ">
         <Outlet />
       </main>
     </div>

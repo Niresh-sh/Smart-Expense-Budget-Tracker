@@ -3,6 +3,9 @@ import { DollarSign, TrendingUp, Tag, Wallet } from "lucide-react";
 import Navbar from "../Components/Navbar";
 import CategoryChart from "../Components/Categorychart";
 import MonthlySpending from "../Components/Monthlychart";
+import Weekchart from "../Components/Weekchart";
+import Insightscard from "../Components/Insightscard";
+import Transactionscard from "../Components/Transactioncard";
 
 const Dashboard = () => {
   return (
@@ -97,10 +100,18 @@ const Dashboard = () => {
       </section>
 
       <section className="">
-        <div className="p-2 bg-gray-100 min-h-screen">
+        <div className=" bg-gray-100 min-h-screen">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <MonthlySpending />
         <CategoryChart />
+      </div>
+
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+       <div className="w-400 grid grid-cols-3 gap-3">
+        <Weekchart />
+        <Insightscard />
+        <Transactionscard />
+        </div>
       </div>
     </div>
       </section>
